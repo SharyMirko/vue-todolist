@@ -21,7 +21,7 @@
             
             <div class="task-container">
                 <ol>
-                    <li v-for="(item, index) in arrTask" :class="item.done == true ? 'done ' + item.type : item.type" @click="item.done = !item.done"><span>{{ item.task }}</span> <button class="btn-remove" @click="arrTask.splice(index, 1)">X</button></li>
+                    <li v-for="(item, index) in arrTask" :class="item.done == true ? 'done ' + item.type : item.type" ><div class="task" @click="item.done = !item.done">{{ item.task }}</div> <button class="btn-remove" @click="arrTask.splice(index, 1)">X</button></li>
                 </ol>
             </div>
 

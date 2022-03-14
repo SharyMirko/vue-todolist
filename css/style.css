@@ -73,6 +73,10 @@ li:hover {
     color: red;
 }
 
-.done span {
+.done div {
     text-decoration: line-through;
+}
+
+.task {
+    width: 100%;
 }
