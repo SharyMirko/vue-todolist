@@ -16,13 +16,20 @@
                  </div>
             <div class="forms">
                 <input @click="value0" v-on:keyup.enter="addTask" type="text" value="add your task" name="" id="newTask" v-model="newTask.task">
+                <select name="" id="taskType">
+                    <option value="easy">Easy</option>
+                    <option value="normal">Normal</option>
+                    <option value="hard">Hard</option>
+                </select>
                 <button @click="addTask" class="btn-add">Add Task</button>
+               
             </div>     
             
             <div class="task-container">
                 <ol>
                     <li v-for="(item, index) in arrTask" :class="item.done == true ? 'done ' + item.type : item.type" ><div class="task" @click="item.done = !item.done">{{ item.task }}</div> <button class="btn-remove" @click="arrTask.splice(index, 1)">X</button></li>
                 </ol>
+                <div v-if="arrTask.length == 0">Pelandrone</div>
             </div>
 
 

@@ -34,7 +34,9 @@ const app = new Vue({
             document.getElementById('newTask').value = ''
         },
         addTask(){
+            let typeValue = document.getElementById('taskType').value
             if(this.newTask.task != '') {
+                this.newTask.type = typeValue
                 this.arrTask.unshift(this.newTask);
                 this.newTask = {
                     task: '',

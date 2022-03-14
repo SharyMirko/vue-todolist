@@ -39,6 +39,11 @@ h1 {
     padding: .5rem;
 }
 
+#taskType {
+    text-align: center;
+    padding: .5rem;
+}
+
 .task-container {
     margin-top: 3rem;
     background-color: grey;
@@ -79,4 +84,16 @@ li:hover {
 
 .task {
     width: 100%;
+}
+
+.normal {
+    border-bottom: 1px solid green;
+}
+
+.easy {
+    border-bottom: 1px solid rebeccapurple;
+}
+
+.hard {
+    border-bottom: 1px solid rgb(177, 100, 0);
 }
