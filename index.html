@@ -15,16 +15,13 @@
                      <h2>Whatcha gonna do when they come for you?</h2>
                  </div>
             <div class="forms">
-                <input type="text" name="" id="newTask">
-                <button class="btn-add" type="submit">Add Task</button>
+                <input @click="value0" v-on:keyup.enter="addTask" type="text" value="add your task" name="" id="newTask" v-model="newTask.task">
+                <button @click="addTask" class="btn-add">Add Task</button>
             </div>     
             
             <div class="task-container">
                 <ol>
-                    <li>Lorem ipsum dolor <button class="btn-remove">X</button></li>
-                    <li>Lorem ipsum dolor <button class="btn-remove">X</button></li>
-                    <li>Lorem ipsum dolor fdhbfdusnfns ifnsidun <button class="btn-remove">X</button></li>
-                    <li>Lorem ipsum dolor <button class="btn-remove">X</button></li>
+                    <li v-for="(item, index) in arrTask" :class="item.done == true ? 'done ' + item.type : item.type" @click="item.done = !item.done"><span>{{ item.task }}</span> <button class="btn-remove" @click="arrTask.splice(index, 1)">X</button></li>
                 </ol>
             </div>
 
